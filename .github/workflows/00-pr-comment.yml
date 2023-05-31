@@ -18,3 +18,5 @@ jobs:
         with:
           script: |
             core.info(JSON.stringify(context, null, 2))
+
+            core.info('This is a new feature from the new-feature branch!')
