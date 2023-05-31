@@ -25,3 +25,10 @@ jobs:
             core.info(JSON.stringify(context, null, 2))
 
             core.info('This is a new feature from the new-feature branch!')
+            
+            github.rest.issues.createComment({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              issue_number: context.payload.number,
+              body: 'Thank you for the PR!'
+            })
