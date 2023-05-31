@@ -1,0 +1,16 @@
+name: Dump the Workflow Context
+
+on:
+  workflow_dispatch:
+
+jobs:
+  comment:
+    name: Dump the Context
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dump the Context
+        uses: actions/github-script@v6
+        with:
+          script: |
+            core.info(JSON.stringify(context, null, 2))
