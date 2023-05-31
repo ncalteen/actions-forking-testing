@@ -71,6 +71,19 @@ will appear in the Actions tab of the GitHub UI._
   - Workflow is already present in the Actions tab
   - Workflow run must be approved by a maintainer
 
-## References
+### Test 5
 
-- [Approving workflow runs from public forks](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)
+- **Source Repo:** `ncalteen-testuser/forking-test`
+- **Source Branch:** `main`
+- **Activity:**
+  - Create `01-context.yml` and push directly to `main`
+  - Submit PR to `ncalteen-actions/forking-test`
+- **Result:**
+  - Workflow is immediately present in the Actions tab of the **forked**
+    repository
+  - Workflow is **not** immediately present in the Actions tab of the **source**
+    repository
+- **Activity:**
+  - Approve and merge PR into `ncalteen-actions/forking-test`
+- **Result:**
+  - Workflow is now present in the Actions tab of the **source**
